@@ -1,38 +1,100 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: poppins;
+  src: url('/assets/fonts/Poppins-Regular.ttf');
 }
-
+@font-face {
+  font-family: poppins-semibold;
+  src: url('/assets/fonts/Poppins-SemiBold.ttf');
+}
 * {
-  box-sizing: border-box;
+  font-family: poppins;
+}
+.text-primary {
+  color: var(--primary-text);
+}
+.text-secondary {
+  color: var(--secondary-text);
+}
+.text-title {
+  color: var(--text-title);
+}
+.text-subtitle {
+ color: var(--secondary-text-subtitle); 
+}
+.text-regular {
+  font-family: poppins;
+}
+.text-semibold {
+  font-family: poppins-semibold;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.item-link:hover span, .navbar-link:hover span {
+  color: var(--color-turquoise);
+  transition-duration: .3s;
 }
 
-h1,
-h2,
-p,
-ul {
-  margin: 0;
+.sidebar-wrapper {
+  width: 300px;
+}
+.content-wrapper {
+  padding: 20px;
+  max-height: min(100vh - 105px);
+  overflow-y: overlay;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
+.sidebar-item-active img{
+  background: var(--color-turquoise);
+}
+.sidebar-item-active span {
+  color: var(--color-turquoise);
+  font-family: poppins-semibold;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
+.rightbar {
+  height: min(100vh - 105px);
+  width: 450px;
+}
+
+.navbar-active {
+  background: var(--color-turquoise);
+  border-radius: 10px;
+}
+.navbar-active span {
+  color: white !important;
+  font-family: poppins-semibold;
+}
+.custom-card {
+  border-radius: 20px;
+  padding: 30px 45px;
+}
+
+.full-height {
+  height: min(100vh - 105px);
+}
+
+.right-agenda-card {
+  height: min(100vh - 620px);
+}
+
+.active-button-group {
+  background-color: var(--color-turquoise) !important;
+}
+
+.MuiTableSortLabel-root.MuiTableSortLabel-active,
+.MuiTableSortLabel-root:hover,
+.MuiTableSortLabel-icon {
+  color: inherit !important;
+}
+:root {
+  --text-title: #3F3F3F;
+  --primary-text: #0F1B40;
+  --secondary-text: #808080;
+  --secondary-text-subtitle: #B8B8B8;
+  --color-turquoise: #1695C9;
+  --bg-primary: #EEF5FF;
+  --list-category: #AF4A6D;
 }
